@@ -51,9 +51,9 @@ dht DHT;
 // with the arduino pin number it is connected to
 //const int rs = 22, en = 23, d4 = 24, d5 = 25, d6 = 26, d7 = 27;
 LiquidCrystal lcd(22,23,24, 25, 26, 27);
-int h=11 ; 
-int m= 53; 
-int s = 30; 
+int h=12 ; 
+int m= 8; 
+int s = 0; 
 int flag; 
 int TIME; 
 int min_temp;
@@ -62,7 +62,7 @@ void setup() {
 
    Serial.begin(9600);
     pinMode(40, INPUT_PULLUP);
-  //pinMode(13, OUTPUT);
+  
    delay(500);
   Serial.println("DHT11 Humidity & temperature Sensor\n\n");
   delay(1000);
@@ -102,8 +102,8 @@ void loop() {
         m=0; 
         h=h+1;  
       } 
-    if(h==13) { 
-      h=1; 
+    if(h==24) { 
+      h=0; 
      } 
 
    
